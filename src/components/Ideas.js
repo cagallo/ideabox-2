@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../css/Ideas.css';
 
-const Ideas = () => {
+const Ideas = ({name}) => {
     return (
-        <h2>Ideas go here!</h2>
+        <h2>Hello, {name}!</h2>
     )
 }
 
