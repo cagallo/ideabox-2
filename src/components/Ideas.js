@@ -1,9 +1,16 @@
 import React from 'react';
+import Card from '../components/Card'
 import '../css/Ideas.css';
 
-const Ideas = ({name}) => {
+const Ideas = (props) => {
+    const {name} = props;
+
     return (
-        <h2>Hello, {name}!</h2>
+        <div className='ideas-container'>
+            <Card />
+            <Card />
+            <Card />
+        </div>
     )
 }
 
