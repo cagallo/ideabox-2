@@ -2,10 +2,12 @@ import React from 'react';
 import '../css/Card.css';
 
 
-const Card = () => {
+const Card = ({title, description, id}) => {
     return (
         <div className='card'>
-            <h3>Card</h3>
+            <h3>{title}</h3> 
+            <p>{description}</p>
+            <button>🗑</button>
         </div>
     )
 }

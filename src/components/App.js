@@ -2,6 +2,7 @@ import React, {
   Component
 } from 'react';
 import Ideas from '../components/Ideas';
+import Form from '../components/Form';
 import '../css/App.css';
 
 class App extends Component {
@@ -27,14 +28,21 @@ class App extends Component {
     }
   }
 
+  addIdea = (newIdea) => {
+    this.setState({ideas: [...this.state.ideas, newIdea]})
+  }
+
   render() {
     return ( 
       <main className = 'App'>
       <h1> IdeaBox </h1> 
-      <Ideas name='Travis'/>
+      <Form addIdea={this.addIdea} />
+      {!this.state.ideas.length && <h2>No ideas yet--add some!</h2> }
+      <Ideas ideas={this.state.ideas}/>
       </main>
     )
   }
+
 }
 
 export default App;
